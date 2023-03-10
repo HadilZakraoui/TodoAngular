@@ -1,0 +1,23 @@
+<p>nav works!</p>
+<!--interpolation-->
+{{test}}
+<!--propertyBinding-->
+<div [style.backgroundColor]="color">this is my color</div>
+<!--TwoWayBinding-->
+<input type="text" [(ngModel)]="color" >
+
+<!--eventBinding-->
+<input type="submit" value="changeColor" (click)="changeColor()">
+
+
+<br>
+<input type="text" #t (change)="twoway(t.value)">
+<input type="submit" value="changeC" >
+<div *ngFor="let p of listProduct">
+    <div *ngIf="p.quantity!=0">
+    {{p.id}}
+    {{p.product}}
+    {{p.price}}
+</div>
+<!-- <input type="submit" value="buy" [disabled]="p.quantity!=0"> -->
+</div>

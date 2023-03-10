@@ -1,0 +1,25 @@
+table{
+    border-collapse: collapse
+  }
+  
+  td{
+    border: 1px solid black;
+    padding: 10px;
+  }
+  .container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+   
+  }
+  
+  .search-hero {
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }

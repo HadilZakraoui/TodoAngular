@@ -1,0 +1,78 @@
+Question2:
+<p>{{titre}}</p>
+
+Question5:
+<form *ngFor="let a of listeArticles" >
+    <div class="article">
+        <fieldset >
+            <legend>{{a.titre}}</legend>
+            <label><b>Contenu</b></label> {{a.contenu}}
+            <br>
+            <label><b>Auteur</b></label>{{a.auteur}}
+            <br>
+            <label><b>Date</b></label>{{a.date}}
+            <br>
+            <label><b>Categorie</b></label>{{a.categorie}}
+     
+         </fieldset>
+    </div>
+       
+</form>
+Question6:
+<form *ngFor="let a of listeArticles" >
+    <div *ngIf="a.categorie!='Travail'" class="article">
+        <fieldset >
+            <legend>{{a.titre}}</legend>
+            <label><b>Contenu</b></label> {{a.contenu}}
+            <br>
+            <label><b>Auteur</b></label>{{a.auteur}}
+            <br>
+            <label><b>Date</b></label>{{a.date}}
+            <br>
+            <label><b>Categorie</b></label>{{a.categorie}}
+     
+         </fieldset>
+     
+    </div>
+
+</form>
+Question7:
+
+<form *ngFor="let a of listeArticles" >
+    <div [ngClass]="{'education': a.categorie.toLowerCase() === 'education'}"class="article" >
+        <fieldset  >
+            <legend>{{a.titre}}</legend>
+            <label><b>Contenu</b></label> {{a.contenu}}
+            <br>
+            <label><b>Auteur</b></label>{{a.auteur}}
+            <br>
+            <label><b>Date</b></label>{{a.date}}
+            <br>
+            <label><b>Categorie</b></label>{{a.categorie}}
+     
+         </fieldset>
+        </div>
+</form>
+
+
+
+Question10:
+
+
+<form *ngFor="let a of listeArticles"  >
+    <div>
+        <fieldset >
+            <legend>{{a.titre}}</legend>
+            <label><b>Contenu</b></label> {{a.contenu}}
+            <br>
+            <label><b>Auteur</b></label>{{a.auteur}}
+            <br>
+            <label><b>Date</b></label>{{a.date}}
+            <br>
+            <label><b>Categorie</b></label>{{a.categorie}}
+     
+         </fieldset>
+    </div>
+</form>
+<h5>Nombre Totale des articles</h5>
+<input type="text" [value]="listeArticles.length"  >

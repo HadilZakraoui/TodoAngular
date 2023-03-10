@@ -1,0 +1,40 @@
+
+Question4:
+<h1>Liste des emplois</h1>
+
+<div >
+    <div class="row">
+      <div class="search-hero">
+        <br>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText"  autocomplete="off"
+        placeholder="   Cherchez avec entreprise">   Question6: 
+<br>
+<br>
+<table >
+    <tr>
+      <td style="font-weight: bolder;">Id</td>
+      <td style="font-weight: bolder;">Titre</td>
+      <td style="font-weight: bolder;">Entreprise</td>
+      <td style="font-weight: bolder;">Etat</td>
+    </tr>
+    <tr *ngFor="let e of listEmploi| filter:searchText">
+      <td>{{e.id}}</td>
+      <td>{{e.titre}}</td>
+      <td>{{e.entreprise}}</td>
+      <td>{{e.etat}}</td>
+      <td><input type="submit" value="postuler" [disabled]="e.etat==false"></td>
+    </tr>
+  </table>
+  <br>
+  <br>
+  exercice5:
+  <br>
+  <br>
+  <button class="btn btn-primary"  type ="submit" (click)="calcul()">Bilan</button>
+  <h5>liste d'emploi non cloturés  :  {{somme}}</h5>
+
+ 
+ 
+  </div>
+  </div>
+  </div>
